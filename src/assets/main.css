@@ -1,0 +1,34 @@
+@import "./base.css";
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.gap {
+  gap: 5px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+
+.flex-2 {
+  flex: 2;
+}
+
+
+.flex-3 {
+  flex: 3;
+}

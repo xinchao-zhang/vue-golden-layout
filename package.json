@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "golden-layout": "^2.5.0",
+    "lodash.clonedeep": "^4.5.0",
     "vue": "^3.2.38"
   },
   "devDependencies": {
+    "@types/lodash.clonedeep": "^4.5.7",
     "@types/node": "^16.11.56",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vue/tsconfig": "^0.1.3",

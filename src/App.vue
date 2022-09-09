@@ -6,5 +6,5 @@ const props = defineProps<{
 </script>
 
 <template>
-  <GoldenLayout :config="config" :header="{show: 'top', popout: false}" class="flex-1"/>
+  <GoldenLayout :config="config" show-header="top" class="flex-1"/>
 </template>

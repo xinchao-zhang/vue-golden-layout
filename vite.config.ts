@@ -13,6 +13,7 @@ export default defineConfig({
   },
 
   build: {
+    minify: false,
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
       name: 'VueGoldenLayout',

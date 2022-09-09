@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App Test</title>
+
+    <link rel="stylesheet" href="../dist/style.css"></link>
+  </head>
+  <body class="flex-col" style="height: 100vh">
+    <div class="flex-col gap flex-1">
+      <div id="gl" class="flex-1 flex-col" style="background: pink"></div>
+      
+      <div class="flex-row gap flex-1 parking" style="background: rgb(153, 245, 6)">
+        <div id="app1" class="flex-1"></div>
+        <div id="app2" class="flex-1"></div>
+      </div>
+      <div class="flex-row gap" id="app3">
+
+      </div>
+    </div>
+   
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="../dist/vue-golden-layout.umd.js"></script>
+    <script>
+      const {App, App1, App2, App3} = VueGoldenLayout;
+      const portals = Vue.reactive({});
+      const config = Vue.reactive({ type: 'row', content: [] });
+
+      Vue.createApp(App, { config: config }).provide("portals", portals).mount('#gl');
+      Vue.createApp(App1, { state: "app1" }).provide("portals", portals).mount('#app1');
+      Vue.createApp(App2, { state: "app2" }).provide("portals", portals).mount('#app2');
+      Vue.createApp(App3, { state: "app3" }).provide("config", config).mount('#app3');
+
+    </script>
+  </body>
+</html>
